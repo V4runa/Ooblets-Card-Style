@@ -1,0 +1,156 @@
+* {
+  transition: all 0.5 ease-in-out;
+}
+
+body {
+  background-color: #3e9e9e;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.outerBorder {
+  margin: 30px;
+  display: flex;
+  height: 420px;
+  width: 300px;
+  align-items: center;
+  justify-content: center;
+  animation: rotation 1.5s ease-in-out infinite alternate-reverse;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes rotation {
+  from {
+    border-radius: 30px;
+    border: transparent;
+    border-bottom: solid;
+    border-right: solid;
+    border-left-width: 0;
+    border--right-width: 8px;
+    border--bottom-width: 6px;
+    border-color: orange;
+    transform: rotate3d(1, 1, 1, 0deg);
+    box-shadow: 2px 5px 8px 4px rgba(0, 0, 0, 0.2);
+  }
+  to {
+    border-radius: 30px;
+    border-bottom: solid;
+    border-left: solid;
+    border-left-width: 4px;
+    border-bottom-width: 6px;
+    border-right-width: 0px;
+    border-color: orange;
+    transform: rotate3d(0, 1, 1, 5deg);
+    box-shadow: -2px 5px 8px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.innerBorder {
+  height: 400px;
+  width: 300px;
+  border: 10px solid rgb(42, 17, 97);
+  border-radius: 25px;
+  background-color: rgb(93, 35, 178);
+  z-index: -1;
+  box-shadow: inset 0 0 4px 1px rgba(0, 0, 0, 0.5);
+}
+
+.icon {
+  border: 5px solid;
+  border-color: rgb(93, 35, 178);
+  position: relative;
+  display: flex;
+  top: 10px;
+  left: 15px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  color: white;
+  background-color: rgb(7, 44, 212);
+  border-radius: 50%;
+  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.3);
+  z-index: 2;
+  text-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  position: relative;
+  top: -60px;
+  height: 400px;
+}
+
+.avatar {
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
+  position: relative;
+  top: 5px;
+  z-index: 0;
+  border-top-right-radius: 10px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.cardName {
+  position: relative;
+  top: -2px;
+  left: 12.5px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-family: "Helvetica Rounded", sans-serif;
+  height: 30px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  border: 2px solid;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: rgb(93, 35, 178);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0px 2px 2px rgba(255, 255, 255, 0.2),
+    0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.cardName h1 {
+  flex: 1;
+  text-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -12px;
+  left: 12px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  z-index: -1;
+  padding: 3px;
+  width: 250px;
+  height: 100px;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 85% 100%, 15% 100%, 0 80%);
+  background-color: rgb(42, 17, 97);
+  color: white;
+  font-size: 14px;
+  font-family: "Helvetica Rounded", sans-serif;
+  font-weight: bold;
+  text-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 5px 10px rgba(0, 0, 0, 0.41);
+}
+
+.description span {
+  color: rgba(10, 116, 255, 0.684);
+}
